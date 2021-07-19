@@ -37,10 +37,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "alphaws\\laravel-billingo-v3\\LaravelBillingoServiceProvider"
+        "Alphaws\\BillingoApiV3\\LaravelBillingoServiceProvider"
       ],
       "aliases": {
-        "BillingoApi": "alphaws\\laravel-billingo-v3\\Facades\\BillingoApi"
+        "BillingoApi": "Alphaws\\BillingoApiV3\\Facades\\BillingoApi"
       }
     }
   }
