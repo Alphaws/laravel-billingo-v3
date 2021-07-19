@@ -1,6 +1,6 @@
 <?php
 
-namespace Alphaws\LaravelBillingoV3;
+namespace Alphaws\BillingoApiV3;
 
 use Illuminate\Support\ServiceProvider;
 

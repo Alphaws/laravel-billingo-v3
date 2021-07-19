@@ -1,6 +1,6 @@
 <?php
 
-namespace Alphaws\LaravelBillingoV3\Facades;
+namespace Alphaws\BillingoApiV3\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
