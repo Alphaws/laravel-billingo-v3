@@ -44,25 +44,13 @@ class BillingoApi
                 RequestOptions::EXPECT => false,
             ]
         );
-
-//        try {
-//            $request = $this->client->request('GET', '/v3/partners?page=1');
-//            dump($request);
-//            dump($request->getBody()->getContents());
-//            //$response = $this->client->send($request, ['headers' => 'X-API-KEY: ' . $apiKey]);
-//            //dump($response);
-//            $response2 = $this->client->request('GET', '/v3/partners?page=1');
-//           // dump($response2);
-//        } catch (\Exception $e) {
-//            echo 'ERROR:';
-//           // dump($e);
-//        }
-//
-//        die('aaaa');
-
-
     }
 
+    /**
+     * Retrieve Billingo Client
+     * 
+     * @return \GuzzleHttp\Client
+     */
     public function getClient(): ApiClient
     {
         return $this->client;

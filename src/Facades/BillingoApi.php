@@ -2,6 +2,7 @@
 
 namespace Alphaws\BillingoApiV3\Facades;
 
+use Alphaws\BillingoApiV3\Services\BillingoService;
 use Illuminate\Support\Facades\Facade;
 
 /**
