@@ -39,7 +39,7 @@
         "Alphaws\\BillingoApiV3\\LaravelBillingoServiceProvider"
       ],
       "aliases": {
-        "BillingoApi": "Alphaws\\BillingoApiV3\\Facades\\BillingoApi"
+        "Billingo": "Alphaws\\BillingoApiV3\\Facades\\BillingoFacade"
       }
     }
   }

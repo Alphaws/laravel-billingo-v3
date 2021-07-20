@@ -2,7 +2,6 @@
 
 namespace Alphaws\BillingoApiV3;
 
-use Alphaws\BillingoApiV3\Services\BillingoService;
 use GuzzleHttp\Client as ApiClient;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Middleware;
@@ -48,11 +47,45 @@ class BillingoApi
 
     /**
      * Retrieve Billingo Client
-     * 
+     *
      * @return \GuzzleHttp\Client
      */
     public function getClient(): ApiClient
     {
         return $this->client;
+    }
+
+    /**
+     * @param string $method
+     * @param string $uri
+     * @param null $data
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getData(string $method, string $uri, $data = null)
+    {
+        $res = $this->client->request($method, '/v3/' . $uri);
+        return json_decode($res->getBody()->getContents(), true);
+    }
+
+
+    public function getPartners($page = 0, $perPage = 10)
+    {
+        $uri = 'partners';
+        return $this->getData('GET', $uri);
+    }
+
+    public function getPartner($id)
+    {
+        //
+    }
+
+    public function createPartner()
+    {
+        //
+    }
+
+    public function deletePartner()
+    {
+        //
     }
 }

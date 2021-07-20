@@ -2,7 +2,6 @@
 
 namespace Alphaws\BillingoApiV3;
 
-use Alphaws\BillingoApiV3\Services\BillingoService;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -13,8 +12,10 @@ class LaravelBillingoServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->bind('billingo', function($app) {
-            return new Billingo();
+        $this->app->alias(Alphaws\LaravelIntervals\Repository::class, 'LaravelIntervals');
+
+        $this->app->bind('billingo', function ($app) {
+            return new Billingo;
         });
     }
 
