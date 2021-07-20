@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\Facade;
  * Class BillingoApi
  * @package Alphaws\LaravelBillingoV3\Facades
  */
-class BillingoApi extends Facade
+class BillingoFacade extends Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return 'billingo-api';
+        return 'billingo';
     }
 }

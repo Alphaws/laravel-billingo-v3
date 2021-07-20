@@ -19,12 +19,11 @@
   ],
   "require": {
     "php": "^7.1",
-    "illuminate/support": "^6|^7|^8",
-    "alphaws/billingo-api-v3": "@dev"
+    "illuminate/support": "^6|^7|^8"
   },
   "require-dev": {
     "orchestra/testbench": "^4.0",
-    "phpunit/phpunit": "^8.0"
+    "phpunit/phpunit": "^9.3"
   },
   "autoload": {
     "psr-4": {
@@ -40,7 +39,7 @@
         "Alphaws\\BillingoApiV3\\LaravelBillingoServiceProvider"
       ],
       "aliases": {
-        "BillingoApi": "Alphaws\\BillingoApiV3\\Facades\\BillingoApi"
+        "Billingo": "Alphaws\\BillingoApiV3\\Facades\\BillingoFacade"
       }
     }
   }

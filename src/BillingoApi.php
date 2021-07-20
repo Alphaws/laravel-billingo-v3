@@ -2,7 +2,6 @@
 
 namespace Alphaws\BillingoApiV3;
 
-use Alphaws\BillingoApiV3\Services\BillingoService;
 use GuzzleHttp\Client as ApiClient;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Middleware;
@@ -44,27 +43,49 @@ class BillingoApi
                 RequestOptions::EXPECT => false,
             ]
         );
-
-//        try {
-//            $request = $this->client->request('GET', '/v3/partners?page=1');
-//            dump($request);
-//            dump($request->getBody()->getContents());
-//            //$response = $this->client->send($request, ['headers' => 'X-API-KEY: ' . $apiKey]);
-//            //dump($response);
-//            $response2 = $this->client->request('GET', '/v3/partners?page=1');
-//           // dump($response2);
-//        } catch (\Exception $e) {
-//            echo 'ERROR:';
-//           // dump($e);
-//        }
-//
-//        die('aaaa');
-
-
     }
 
+    /**
+     * Retrieve Billingo Client
+     *
+     * @return \GuzzleHttp\Client
+     */
     public function getClient(): ApiClient
     {
         return $this->client;
+    }
+
+    /**
+     * @param string $method
+     * @param string $uri
+     * @param null $data
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getData(string $method, string $uri, $data = null)
+    {
+        $res = $this->client->request($method, '/v3/' . $uri);
+        return json_decode($res->getBody()->getContents(), true);
+    }
+
+
+    public function getPartners($page = 0, $perPage = 10)
+    {
+        $uri = 'partners';
+        return $this->getData('GET', $uri);
+    }
+
+    public function getPartner($id)
+    {
+        //
+    }
+
+    public function createPartner()
+    {
+        //
+    }
+
+    public function deletePartner()
+    {
+        //
     }
 }
