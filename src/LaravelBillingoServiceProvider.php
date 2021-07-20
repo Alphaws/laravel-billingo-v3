@@ -12,8 +12,6 @@ class LaravelBillingoServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->alias(Alphaws\LaravelIntervals\Repository::class, 'LaravelIntervals');
-
         $this->app->bind('billingo', function ($app) {
             return new Billingo;
         });
