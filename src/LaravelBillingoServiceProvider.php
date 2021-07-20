@@ -2,6 +2,7 @@
 
 namespace Alphaws\BillingoApiV3;
 
+use Alphaws\BillingoApiV3\Services\BillingoService;
 use Illuminate\Support\ServiceProvider;
 
 /**
