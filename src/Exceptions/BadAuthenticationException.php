@@ -22,23 +22,13 @@
 
 declare(strict_types=1);
 
-namespace Alphaws\BillingoApiV3;
-
-use Illuminate\Support\ServiceProvider;
+namespace Alphaws\BillingoApiV3\Exceptions;
 
 /**
- * Class LaravelBillingoServiceProvider
- * @package Alphaws\LaravelBillingoV3
+ * Class BadAuthenticationException
+ * @package Alphaws\BillingoApiV3\Exceptions
  */
-class LaravelBillingoServiceProvider extends ServiceProvider
+class BadAuthenticationException extends \Exception
 {
-    /**
-     *
-     */
-    public function register()
-    {
-        $this->app->bind('billingo', function ($app) {
-            return new Billingo;
-        });
-    }
+
 }
