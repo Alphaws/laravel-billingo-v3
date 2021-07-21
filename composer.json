@@ -1,46 +1,46 @@
 {
-  "name": "alphaws/laravel-billingo-v3",
-  "description": "Laravel wrapper for Billingo Invoice Api v3",
-  "keywords": [
-    "laravel",
-    "billingo",
-    "API",
-    "wrapper",
-    "V3"
-  ],
-  "homepage": "https://github.com/Alphaws/laravel-billingo-v3",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Imre Szeness",
-      "email": "imre@prstart.co.uk"
+    "name": "alphaws/laravel-billingo-v3",
+    "type": "library",
+    "description": "Laravel wrapper for Billingo Invoice Api v3",
+    "keywords": [
+        "laravel",
+        "billingo",
+        "API",
+        "wrapper",
+        "V3"
+    ],
+    "homepage": "https://github.com/Alphaws/laravel-billingo-v3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Imre Szeness",
+            "email": "imre@prstart.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Billingo": "Alphaws\\BillingoApiV3\\Facades\\BillingoFacade"
+            },
+            "providers": [
+                "Alphaws\\BillingoApiV3\\LaravelBillingoServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Alphaws\\BillingoApiV3\\": "src"
+        }
     }
-  ],
-  "require": {
-    "php": "^7.1",
-    "illuminate/support": "^6|^7|^8"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^4.0",
-    "phpunit/phpunit": "^9.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "Alphaws\\BillingoApiV3\\": "src"
-    }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Alphaws\\BillingoApiV3\\LaravelBillingoServiceProvider"
-      ],
-      "aliases": {
-        "Billingo": "Alphaws\\BillingoApiV3\\Facades\\BillingoFacade"
-      }
-    }
-  }
 }
